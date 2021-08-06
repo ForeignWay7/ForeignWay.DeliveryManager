@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.App", "src\ForeignWay.DeliveryManager.App\ForeignWay.DeliveryManager.App.csproj", "{3428C144-B1D5-47B2-A201-FFFCC56A4866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.App", "src\ForeignWay.DeliveryManager.App\ForeignWay.DeliveryManager.App.csproj", "{3428C144-B1D5-47B2-A201-FFFCC56A4866}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.DatabaseAccess", "src\ForeignWay.DeliveryManager.DatabaseAccess\ForeignWay.DeliveryManager.DatabaseAccess.csproj", "{E991F1E8-45DE-4A3F-B7AA-8172DBF983F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.DatabaseAccess.Contracts", "src\ForeignWay.DeliveryManager.DatabaseAccess.Contracts\ForeignWay.DeliveryManager.DatabaseAccess.Contracts.csproj", "{86E49773-31FF-49CC-BCDF-85472C337049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.BusinessLogic", "src\ForeignWay.DeliveryManager.BusinessLogic\ForeignWay.DeliveryManager.BusinessLogic.csproj", "{AFC9D176-E81C-4102-AA18-961B154C30C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.BusinessLogic.Contracts", "src\ForeignWay.DeliveryManager.BusinessLogic.Contracts\ForeignWay.DeliveryManager.BusinessLogic.Contracts.csproj", "{3196FBA5-F8F9-420F-91C9-80CAEA0BB22C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.Boostrapper", "src\ForeignWay.DeliveryManager.Boostrapper\ForeignWay.DeliveryManager.Boostrapper.csproj", "{C8C5E4C0-210F-431C-B0CF-637D5C2BE9B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E991F1E8-45DE-4A3F-B7AA-8172DBF983F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E991F1E8-45DE-4A3F-B7AA-8172DBF983F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E991F1E8-45DE-4A3F-B7AA-8172DBF983F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E991F1E8-45DE-4A3F-B7AA-8172DBF983F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E49773-31FF-49CC-BCDF-85472C337049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E49773-31FF-49CC-BCDF-85472C337049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E49773-31FF-49CC-BCDF-85472C337049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E49773-31FF-49CC-BCDF-85472C337049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC9D176-E81C-4102-AA18-961B154C30C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC9D176-E81C-4102-AA18-961B154C30C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC9D176-E81C-4102-AA18-961B154C30C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC9D176-E81C-4102-AA18-961B154C30C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3196FBA5-F8F9-420F-91C9-80CAEA0BB22C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3196FBA5-F8F9-420F-91C9-80CAEA0BB22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3196FBA5-F8F9-420F-91C9-80CAEA0BB22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3196FBA5-F8F9-420F-91C9-80CAEA0BB22C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C5E4C0-210F-431C-B0CF-637D5C2BE9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C5E4C0-210F-431C-B0CF-637D5C2BE9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C5E4C0-210F-431C-B0CF-637D5C2BE9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C5E4C0-210F-431C-B0CF-637D5C2BE9B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

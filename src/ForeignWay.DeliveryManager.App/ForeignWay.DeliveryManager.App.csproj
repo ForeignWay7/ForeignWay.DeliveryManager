@@ -6,12 +6,15 @@
     <AssemblyName>DeliveryManager</AssemblyName>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>..\..\bin\Debug</OutputPath>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>..\..\bin\Release</OutputPath>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.7" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
