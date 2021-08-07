@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ForeignWay.DeliveryManager.BusinessLogic.Contracts\ForeignWay.DeliveryManager.BusinessLogic.Contracts.csproj" />
     <ProjectReference Include="..\ForeignWay.DeliveryManager.StringResources\ForeignWay.DeliveryManager.StringResources.csproj" />
   </ItemGroup>
 </Project>

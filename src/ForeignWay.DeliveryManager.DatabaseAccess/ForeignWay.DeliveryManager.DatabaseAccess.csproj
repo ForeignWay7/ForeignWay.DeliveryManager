@@ -10,4 +10,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>..\..\bin\Release</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ForeignWay.DeliveryManager.DatabaseAccess.Contracts\ForeignWay.DeliveryManager.DatabaseAccess.Contracts.csproj" />
+  </ItemGroup>
 </Project>
