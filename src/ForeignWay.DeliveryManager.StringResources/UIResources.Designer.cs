@@ -61,7 +61,7 @@ namespace ForeignWay.DeliveryManager.StringResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Order View.
+        ///   Looks up a localized string similar to New Order.
         /// </summary>
         public static string NewOrderView_Title {
             get {
