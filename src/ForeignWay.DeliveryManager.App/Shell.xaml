@@ -7,13 +7,14 @@
                       xmlns:app="clr-namespace:ForeignWay.DeliveryManager.App"
                       d:DataContext="{d:DesignInstance app:ShellViewModel}"
                       xmlns:prism="http://prismlibrary.com/"
-                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
                       prism:ViewModelLocator.AutoWireViewModel="True"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:home="clr-namespace:ForeignWay.DeliveryManager.App.Views.Home"
                       Title="Delivery Manager"
                       TitleCharacterCasing="Normal"
-                      Height="350"
-                      Width="525">
+                      Height="785"
+                      Width="1024">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <home:HomeView />
     </Grid>
 </controls:MetroWindow>

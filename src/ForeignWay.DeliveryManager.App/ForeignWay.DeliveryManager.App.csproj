@@ -19,4 +19,8 @@
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.7" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ForeignWay.DeliveryManager.StringResources\ForeignWay.DeliveryManager.StringResources.csproj" />
+  </ItemGroup>
 </Project>
