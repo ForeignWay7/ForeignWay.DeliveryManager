@@ -12,9 +12,6 @@
              d:DesignHeight="450"
              d:DesignWidth="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-        </Grid.RowDefinitions>
         <Image>
             <Image.Source>
                 <DrawingImage>
@@ -72,9 +69,10 @@
                 <Button Margin="20 5 20 20"
                         Content="{x:Static stringResources:UIResources.SingInView_LogIn}"
                         Background="WhiteSmoke"
+                        IsDefault="True"
                         Foreground="Black"
-                        Command="{Binding LogInCommand}"
-                        CommandParameter="{Binding  ElementName=PasswordBox}" />
+                        Command="{Binding SignInCommand}"
+                        CommandParameter="{Binding ElementName=PasswordBox}" />
             </StackPanel>
         </Border>
     </Grid>

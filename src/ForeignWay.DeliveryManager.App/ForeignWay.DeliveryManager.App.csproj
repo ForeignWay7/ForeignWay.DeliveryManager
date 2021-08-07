@@ -21,7 +21,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ForeignWay.DeliveryManager.Boostrapper\ForeignWay.DeliveryManager.Bootstrapper.csproj" />
     <ProjectReference Include="..\ForeignWay.DeliveryManager.BusinessLogic.Contracts\ForeignWay.DeliveryManager.BusinessLogic.Contracts.csproj" />
     <ProjectReference Include="..\ForeignWay.DeliveryManager.StringResources\ForeignWay.DeliveryManager.StringResources.csproj" />
+    <ProjectReference Include="..\ForeignWay.DeliveryManager.Types\ForeignWay.DeliveryManager.Types.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>

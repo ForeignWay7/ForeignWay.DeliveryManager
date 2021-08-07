@@ -1,5 +1,7 @@
 ﻿using ForeignWay.DeliveryManager.App.Helpers;
+using ForeignWay.DeliveryManager.App.Services;
 using ForeignWay.DeliveryManager.App.Views.Home;
+using ForeignWay.DeliveryManager.App.Views.NewOrder;
 using ForeignWay.DeliveryManager.App.Views.SignIn;
 using Prism.Ioc;
 using Prism.Mvvm;
@@ -19,21 +21,33 @@ namespace ForeignWay.DeliveryManager.App
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            Bootstrapper.Bootstrapper.Bootstrap(containerRegistry);
+
             containerRegistry.Register<IPasswordBoxHelper, PasswordBoxHelper>();
+            containerRegistry.Register<IMenuItemsProviderService, MenuItemProviderService>();
+
+            containerRegistry.Register<INavigationService, NavigationService>();
+
+            RegisterViewsForNavigation(containerRegistry);
         }
 
         protected override void Initialize()
         {
             base.Initialize();
 
-            _RegisterViewsWithViewModels();
+            RegisterViewsWithViewModels();
         }
 
-        private void _RegisterViewsWithViewModels()
+        private void RegisterViewsForNavigation(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.RegisterForNavigation<SignInView, SignInViewModel>();
+            containerRegistry.RegisterForNavigation<HomeView, HomeViewModel>();
+            containerRegistry.RegisterForNavigation<NewOrderView, NewOrderViewModel>();
+        }
+
+        private void RegisterViewsWithViewModels()
         {
             ViewModelLocationProvider.Register<Shell, ShellViewModel>();
-            ViewModelLocationProvider.Register<HomeView, HomeViewModel>();
-            ViewModelLocationProvider.Register<SignInView, SignInViewModel>();
         }
 
         protected override void ConfigureViewModelLocator()

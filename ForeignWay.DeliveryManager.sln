@@ -9,15 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.DatabaseAccess.Contracts", "src\ForeignWay.DeliveryManager.DatabaseAccess.Contracts\ForeignWay.DeliveryManager.DatabaseAccess.Contracts.csproj", "{86E49773-31FF-49CC-BCDF-85472C337049}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.BusinessLogic", "src\ForeignWay.DeliveryManager.BusinessLogic\ForeignWay.DeliveryManager.BusinessLogic.csproj", "{AFC9D176-E81C-4102-AA18-961B154C30C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.BusinessLogic", "src\ForeignWay.DeliveryManager.BusinessLogic\ForeignWay.DeliveryManager.BusinessLogic.csproj", "{AFC9D176-E81C-4102-AA18-961B154C30C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.BusinessLogic.Contracts", "src\ForeignWay.DeliveryManager.BusinessLogic.Contracts\ForeignWay.DeliveryManager.BusinessLogic.Contracts.csproj", "{3196FBA5-F8F9-420F-91C9-80CAEA0BB22C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.BusinessLogic.Contracts", "src\ForeignWay.DeliveryManager.BusinessLogic.Contracts\ForeignWay.DeliveryManager.BusinessLogic.Contracts.csproj", "{3196FBA5-F8F9-420F-91C9-80CAEA0BB22C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.Boostrapper", "src\ForeignWay.DeliveryManager.Boostrapper\ForeignWay.DeliveryManager.Boostrapper.csproj", "{C8C5E4C0-210F-431C-B0CF-637D5C2BE9B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.Bootstrapper", "src\ForeignWay.DeliveryManager.Boostrapper\ForeignWay.DeliveryManager.Bootstrapper.csproj", "{C8C5E4C0-210F-431C-B0CF-637D5C2BE9B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.StringResources", "src\ForeignWay.DeliveryManager.StringResources\ForeignWay.DeliveryManager.StringResources.csproj", "{47209856-FC19-4894-8560-66F45DAB8784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForeignWay.DeliveryManager.StringResources", "src\ForeignWay.DeliveryManager.StringResources\ForeignWay.DeliveryManager.StringResources.csproj", "{47209856-FC19-4894-8560-66F45DAB8784}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "src\_build\_build.csproj", "{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.Types", "src\ForeignWay.DeliveryManager.Types\ForeignWay.DeliveryManager.Types.csproj", "{9197F363-5607-4954-B2E0-24255B7763CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,8 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,6 +55,12 @@ Global
 		{47209856-FC19-4894-8560-66F45DAB8784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47209856-FC19-4894-8560-66F45DAB8784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47209856-FC19-4894-8560-66F45DAB8784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9197F363-5607-4954-B2E0-24255B7763CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9197F363-5607-4954-B2E0-24255B7763CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9197F363-5607-4954-B2E0-24255B7763CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9197F363-5607-4954-B2E0-24255B7763CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

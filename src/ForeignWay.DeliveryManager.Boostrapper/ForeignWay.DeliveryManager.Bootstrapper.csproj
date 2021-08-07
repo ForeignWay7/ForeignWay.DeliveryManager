@@ -12,7 +12,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ForeignWay.DeliveryManager.App\ForeignWay.DeliveryManager.App.csproj" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ForeignWay.DeliveryManager.BusinessLogic.Contracts\ForeignWay.DeliveryManager.BusinessLogic.Contracts.csproj" />
     <ProjectReference Include="..\ForeignWay.DeliveryManager.BusinessLogic\ForeignWay.DeliveryManager.BusinessLogic.csproj" />
     <ProjectReference Include="..\ForeignWay.DeliveryManager.DatabaseAccess.Contracts\ForeignWay.DeliveryManager.DatabaseAccess.Contracts.csproj" />

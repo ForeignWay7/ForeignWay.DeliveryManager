@@ -8,13 +8,15 @@
                       d:DataContext="{d:DesignInstance app:ShellViewModel}"
                       xmlns:prism="http://prismlibrary.com/"
                       prism:ViewModelLocator.AutoWireViewModel="True"
+                      xmlns:regionNames="clr-namespace:ForeignWay.DeliveryManager.App.Constants"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-                      xmlns:home="clr-namespace:ForeignWay.DeliveryManager.App.Views.Home"
+                      xmlns:signIn="clr-namespace:ForeignWay.DeliveryManager.App.Views.SignIn"
                       Title="Delivery Manager"
                       TitleCharacterCasing="Normal"
                       Height="785"
                       Width="1024">
     <Grid>
-        <home:HomeView />
+        <ContentControl prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.MainRegion}" />
+        <ContentControl prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.PopupRegion}" />
     </Grid>
 </controls:MetroWindow>

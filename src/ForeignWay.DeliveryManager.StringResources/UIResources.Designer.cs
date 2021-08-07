@@ -61,6 +61,15 @@ namespace ForeignWay.DeliveryManager.StringResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New Order View.
+        /// </summary>
+        public static string NewOrderView_Title {
+            get {
+                return ResourceManager.GetString("NewOrderView_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log in.
         /// </summary>
         public static string SingInView_LogIn {
