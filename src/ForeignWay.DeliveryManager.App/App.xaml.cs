@@ -1,12 +1,12 @@
-﻿using Prism.Ioc;
+﻿using ForeignWay.DeliveryManager.App.Helpers;
+using ForeignWay.DeliveryManager.App.Views.Home;
+using ForeignWay.DeliveryManager.App.Views.SignIn;
+using Prism.Ioc;
 using Prism.Mvvm;
 using System;
 using System.IO;
 using System.Reflection;
 using System.Windows;
-using ForeignWay.DeliveryManager.App.Helpers;
-using ForeignWay.DeliveryManager.App.Views.Home;
-using ForeignWay.DeliveryManager.App.Views.SignIn;
 
 namespace ForeignWay.DeliveryManager.App
 {
@@ -42,23 +42,18 @@ namespace ForeignWay.DeliveryManager.App
 
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(viewType =>
             {
-                string viewModelName;
-
-                if (viewType.Name.EndsWith("View"))
-                    viewModelName = viewType.Name.Replace("View", "ViewModel");
-                else
-                    viewModelName = $"{viewType.Name}ViewModel";
+                var viewModelName = viewType.Name.EndsWith("View") ? viewType.Name.Replace("View", "ViewModel") : $"{viewType.Name}ViewModel";
 
                 var viewPath = viewType.FullName?.Substring(0, viewType.FullName.LastIndexOf(viewType.Name));
                 var fullName = $"{viewPath}{viewModelName}";
 
-                var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;
-                var viewModelAssemblyName = $"{fullName}, {viewAssemblyName}";
+                var viewAssemblyFullName = viewType.GetTypeInfo().Assembly.FullName;
+                var viewModelAssemblyFullName = $"{fullName}, {viewAssemblyFullName}";
 
-                var viewModelType = Type.GetType(viewModelAssemblyName);
+                var viewModelType = Type.GetType(viewModelAssemblyFullName);
 
                 if (viewModelType == null)
-                    throw new FileNotFoundException($"The ViewModel {viewModelAssemblyName} could not be found");
+                    throw new FileNotFoundException($"The requested ViewModel:\"{viewModelAssemblyFullName}\" does not exist..");
 
                 return viewModelType;
             });

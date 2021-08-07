@@ -34,9 +34,9 @@ namespace ForeignWay.DeliveryManager.App.Views.SignIn
         }
 
 
-        private void LogIn(object passwordObject)
+        private void LogIn(object passwordBoxObject)
         {
-            var password = _passwordBoxHelper.GetPasswordFrom(passwordObject);
+            var password = _passwordBoxHelper.GetPasswordFrom(passwordBoxObject);
 
 
         }

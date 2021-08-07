@@ -17,12 +17,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeignWay.DeliveryManager.StringResources", "src\ForeignWay.DeliveryManager.StringResources\ForeignWay.DeliveryManager.StringResources.csproj", "{47209856-FC19-4894-8560-66F45DAB8784}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "src\_build\_build.csproj", "{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA0C5EDE-5189-493A-AB22-EE3BF8712DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3428C144-B1D5-47B2-A201-FFFCC56A4866}.Release|Any CPU.ActiveCfg = Release|Any CPU
