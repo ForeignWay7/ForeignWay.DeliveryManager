@@ -2,6 +2,7 @@
 using ForeignWay.DeliveryManager.App.Services;
 using ForeignWay.DeliveryManager.App.Views.Home;
 using ForeignWay.DeliveryManager.App.Views.NewOrder;
+using ForeignWay.DeliveryManager.App.Views.Orders;
 using ForeignWay.DeliveryManager.App.Views.SignIn;
 using Prism.Ioc;
 using Prism.Mvvm;
@@ -43,6 +44,7 @@ namespace ForeignWay.DeliveryManager.App
             containerRegistry.RegisterForNavigation<SignInView, SignInViewModel>();
             containerRegistry.RegisterForNavigation<HomeView, HomeViewModel>();
             containerRegistry.RegisterForNavigation<NewOrderView, NewOrderViewModel>();
+            containerRegistry.RegisterForNavigation<OrdersView, OrdersViewModel>();
         }
 
         private void RegisterViewsWithViewModels()

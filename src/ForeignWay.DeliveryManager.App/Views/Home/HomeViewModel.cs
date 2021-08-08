@@ -25,6 +25,7 @@ namespace ForeignWay.DeliveryManager.App.Views.Home
         public DelegateCommand<string> NavigateCommand { get; init; }
 
 
+
         public HomeViewModel(IMenuItemsProviderService menuItemsProviderService, INavigationService navigationService)
         {
             _menuItemsProviderService = menuItemsProviderService;
@@ -32,6 +33,8 @@ namespace ForeignWay.DeliveryManager.App.Views.Home
 
             NavigateCommand = new DelegateCommand<string>(ExecuteNavigateCommand);
         }
+
+
 
         private void ExecuteNavigateCommand(string viewName)
         {

@@ -10,12 +10,28 @@
                       prism:ViewModelLocator.AutoWireViewModel="True"
                       xmlns:regionNames="clr-namespace:ForeignWay.DeliveryManager.App.Constants"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-                      xmlns:signIn="clr-namespace:ForeignWay.DeliveryManager.App.Views.SignIn"
+                      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                       Title="Delivery Manager"
                       TitleCharacterCasing="Normal"
                       Height="785"
                       Width="1024">
     <Grid>
+        <StackPanel ZIndex="100"
+                    Visibility="{Binding CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <ToolBarTray VerticalAlignment="Top">
+                <ToolBar>
+                    <Button Command="{Binding BackCommand}">
+                        <Button.Content>
+                            <DockPanel>
+                                <materialDesign:PackIcon Kind="ArrowBack" />
+                                <TextBlock Text="#Back" />
+                            </DockPanel>
+                        </Button.Content>
+                    </Button>
+                </ToolBar>
+            </ToolBarTray>
+        </StackPanel>
+
         <ContentControl prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.MainRegion}" />
         <ContentControl prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.PopupRegion}" />
     </Grid>

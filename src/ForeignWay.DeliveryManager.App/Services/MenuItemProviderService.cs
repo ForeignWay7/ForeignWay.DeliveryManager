@@ -14,6 +14,7 @@ namespace ForeignWay.DeliveryManager.App.Services
             return new ObservableCollection<MenuItemViewModel>
             {
                 new (PackIconKind.BorderColor, UIResources.NewOrderView_Title, ViewNames.NewOrderView),
+                new (PackIconKind.BorderColor, UIResources.OrdersView_Title, ViewNames.OrdersView),
             };
         }
     }

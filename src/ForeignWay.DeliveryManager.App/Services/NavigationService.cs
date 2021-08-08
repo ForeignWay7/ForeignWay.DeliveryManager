@@ -1,6 +1,7 @@
 ﻿using ForeignWay.DeliveryManager.App.Constants;
 using ForeignWay.DeliveryManager.Types;
 using Prism.Regions;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace ForeignWay.DeliveryManager.App.Services
@@ -13,6 +14,23 @@ namespace ForeignWay.DeliveryManager.App.Services
         public NavigationService(IRegionManager regionManager)
         {
             _regionManager = regionManager;
+        }
+
+        public void NavigateBack()
+        {
+            _regionManager.Regions[RegionNames.MainRegion].NavigationService.Journal.GoBack();
+        }
+
+        public bool CanNavigateBack()
+        {
+            try
+            {
+                return _regionManager.Regions[RegionNames.MainRegion].NavigationService.Journal.CanGoBack;
+            }
+            catch (KeyNotFoundException)
+            {
+                return false;
+            }
         }
 
         public void NavigateHome(UserType userType)
