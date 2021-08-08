@@ -79,6 +79,15 @@ namespace ForeignWay.DeliveryManager.StringResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string Shell_NavigateBack {
+            get {
+                return ResourceManager.GetString("Shell_NavigateBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log in.
         /// </summary>
         public static string SingInView_LogIn {
