@@ -1,5 +1,5 @@
 ﻿using ForeignWay.DeliveryManager.App.ViewModels;
-using ForeignWay.DeliveryManager.Types;
+using ForeignWay.DeliveryManager.Types.Users;
 using System.Collections.ObjectModel;
 
 namespace ForeignWay.DeliveryManager.App.Services

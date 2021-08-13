@@ -1,5 +1,7 @@
 ﻿using ForeignWay.DeliveryManager.App.Constants;
 using ForeignWay.DeliveryManager.App.Services;
+using ForeignWay.DeliveryManager.BusinessLogic.Contracts.Users;
+using ForeignWay.DeliveryManager.Types.Users;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
@@ -11,6 +13,7 @@ namespace ForeignWay.DeliveryManager.App
     {
         private readonly INavigationService _navigationService;
         private readonly IRegionManager _regionManager;
+        private readonly IAuthenticationService _authenticationService;
 
 
         private bool _canGoBack;
@@ -21,22 +24,40 @@ namespace ForeignWay.DeliveryManager.App
             set => SetProperty(ref _canGoBack, value);
         }
 
+        public DelegateCommand NavigateHomeCommand { get; init; }
+
         public DelegateCommand BackCommand { get; init; }
 
 
-        public ShellViewModel(INavigationService navigationService, IRegionManager regionManager)
+        public ShellViewModel(INavigationService navigationService, IRegionManager regionManager, IAuthenticationService authenticationService)
         {
             _navigationService = navigationService;
             _regionManager = regionManager;
+            _authenticationService = authenticationService;
 
+            NavigateHomeCommand = new DelegateCommand(ExecuteNavigateHomeCommand, CanNavigateHome);
             BackCommand = new DelegateCommand(ExecuteBackCommand, CanExecuteNavigateBack);
-
-
+            
             NavigateToSignInView();
+        }
+
+        private bool CanNavigateHome()
+        {
+            var user = _authenticationService.GetCurrentUser();
+
+            return user.Equals(User.GetEmpty()) == false;
+        }
+
+
+        private void ExecuteNavigateHomeCommand()
+        {
+            var currentUser = _authenticationService.GetCurrentUser();
+            _navigationService.NavigateHome(currentUser.UserType);
         }
 
         private void NavigationService_Navigated(object sender, RegionNavigationEventArgs e)
         {
+            NavigateHomeCommand.RaiseCanExecuteChanged();
             BackCommand.RaiseCanExecuteChanged();
         }
 
@@ -55,7 +76,7 @@ namespace ForeignWay.DeliveryManager.App
         {
             var canGoBack = _navigationService.CanNavigateBack();
             CanGoBack = canGoBack;
-            
+
             return canGoBack;
         }
     }

@@ -1,7 +1,7 @@
 ﻿using ForeignWay.DeliveryManager.App.Constants;
 using ForeignWay.DeliveryManager.App.ViewModels;
 using ForeignWay.DeliveryManager.StringResources;
-using ForeignWay.DeliveryManager.Types;
+using ForeignWay.DeliveryManager.Types.Users;
 using MaterialDesignThemes.Wpf;
 using System.Collections.ObjectModel;
 

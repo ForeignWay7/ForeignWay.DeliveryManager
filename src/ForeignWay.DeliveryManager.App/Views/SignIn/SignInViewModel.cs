@@ -1,13 +1,15 @@
 ﻿using ForeignWay.DeliveryManager.App.Helpers;
 using ForeignWay.DeliveryManager.App.Services;
-using ForeignWay.DeliveryManager.BusinessLogic.Contracts;
+using ForeignWay.DeliveryManager.BusinessLogic.Contracts.Users;
+using ForeignWay.DeliveryManager.Types.Users;
 using Prism.Commands;
 using Prism.Mvvm;
 using System.Threading.Tasks;
+using Prism.Regions;
 
 namespace ForeignWay.DeliveryManager.App.Views.SignIn
 {
-    public class SignInViewModel : BindableBase
+    public class SignInViewModel : BindableBase, INavigationAware
     {
         private readonly IPasswordBoxHelper _passwordBoxHelper;
         private readonly INavigationService _navigationService;
@@ -23,6 +25,13 @@ namespace ForeignWay.DeliveryManager.App.Views.SignIn
             set => SetProperty(ref _userName, value);
         }
 
+        private bool _isSignInFailed;
+
+        public bool IsSignInFailed
+        {
+            get => _isSignInFailed;
+            set => SetProperty(ref _isSignInFailed, value);
+        }
 
         public DelegateCommand<object> SignInCommand
         {
@@ -45,8 +54,32 @@ namespace ForeignWay.DeliveryManager.App.Views.SignIn
         {
             var password = _passwordBoxHelper.GetPasswordFrom(passwordBoxObject);
 
-            var userType = await _authenticationService.SignInFor(UserName, password);
-            _navigationService.NavigateHome(userType);
+            var userType = await _authenticationService.SignInForAsync(userName, password);
+
+            if (userType == UserType.None)
+            {
+                IsSignInFailed = true;
+            }
+            else
+            {
+                _navigationService.NavigateHome(userType);
+            }
+
+        }
+
+        public void OnNavigatedTo(NavigationContext navigationContext)
+        {
+            
+        }
+
+        public bool IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return false;
+        }
+
+        public void OnNavigatedFrom(NavigationContext navigationContext)
+        {
+
         }
     }
 }

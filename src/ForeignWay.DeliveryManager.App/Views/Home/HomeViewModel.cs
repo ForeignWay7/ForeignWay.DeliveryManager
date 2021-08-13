@@ -1,7 +1,7 @@
 ﻿using ForeignWay.DeliveryManager.App.Constants;
 using ForeignWay.DeliveryManager.App.Services;
 using ForeignWay.DeliveryManager.App.ViewModels;
-using ForeignWay.DeliveryManager.Types;
+using ForeignWay.DeliveryManager.Types.Users;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;

@@ -53,7 +53,8 @@
                     <TextBox FontSize="13"
                              HorizontalContentAlignment="Center"
                              Width="150"
-                             TextWrapping="NoWrap" />
+                             TextWrapping="NoWrap"
+                             Text="{Binding UserName}" />
                 </StackPanel>
                 <StackPanel Margin="20 15 20 30">
                     <TextBlock FontSize="15"
@@ -73,6 +74,13 @@
                         Foreground="Black"
                         Command="{Binding SignInCommand}"
                         CommandParameter="{Binding ElementName=PasswordBox}" />
+
+                <TextBlock Margin="5"
+                           Foreground="DarkRed"
+                           FontWeight="Bold"
+                           Visibility="{Binding IsSignInFailed, Converter={StaticResource BooleanToVisibilityConverter}}"
+                           HorizontalAlignment="Center"
+                           Text="{x:Static stringResources:UIResources.SingInView_WrongCredentials}" />
             </StackPanel>
         </Border>
     </Grid>

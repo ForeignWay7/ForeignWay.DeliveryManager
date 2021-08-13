@@ -1,4 +1,4 @@
-﻿using ForeignWay.DeliveryManager.Types;
+﻿using ForeignWay.DeliveryManager.Types.Users;
 
 namespace ForeignWay.DeliveryManager.App.Services
 {

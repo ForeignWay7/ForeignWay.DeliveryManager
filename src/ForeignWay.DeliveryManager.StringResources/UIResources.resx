@@ -135,4 +135,7 @@
   <data name="SingInView_UserName" xml:space="preserve">
     <value>User name</value>
   </data>
+  <data name="SingInView_WrongCredentials" xml:space="preserve">
+    <value>Wrong Credentials!</value>
+  </data>
 </root>

@@ -113,5 +113,14 @@ namespace ForeignWay.DeliveryManager.StringResources {
                 return ResourceManager.GetString("SingInView_UserName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong Credentials!.
+        /// </summary>
+        public static string SingInView_WrongCredentials {
+            get {
+                return ResourceManager.GetString("SingInView_WrongCredentials", resourceCulture);
+            }
+        }
     }
 }

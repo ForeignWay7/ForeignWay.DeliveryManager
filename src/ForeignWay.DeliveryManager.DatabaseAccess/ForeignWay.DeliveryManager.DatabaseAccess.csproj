@@ -13,5 +13,19 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForeignWay.DeliveryManager.DatabaseAccess.Contracts\ForeignWay.DeliveryManager.DatabaseAccess.Contracts.csproj" />
+    <ProjectReference Include="..\ForeignWay.DeliveryManager.Types\ForeignWay.DeliveryManager.Types.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.46437.65" />
   </ItemGroup>
 </Project>

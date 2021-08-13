@@ -10,4 +10,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>..\..\bin\Release</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Users\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ForeignWay.DeliveryManager.Types\ForeignWay.DeliveryManager.Types.csproj" />
+  </ItemGroup>
 </Project>

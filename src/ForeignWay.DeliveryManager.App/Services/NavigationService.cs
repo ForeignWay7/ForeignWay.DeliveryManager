@@ -1,5 +1,5 @@
 ﻿using ForeignWay.DeliveryManager.App.Constants;
-using ForeignWay.DeliveryManager.Types;
+using ForeignWay.DeliveryManager.Types.Users;
 using Prism.Regions;
 using System.Collections.Generic;
 using System.Windows;

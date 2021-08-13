@@ -1,36 +1,37 @@
-﻿<controls:MetroWindow
-    x:Class="ForeignWay.DeliveryManager.App.Shell"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:app="clr-namespace:ForeignWay.DeliveryManager.App"
-    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:prism="http://prismlibrary.com/"
-    xmlns:regionNames="clr-namespace:ForeignWay.DeliveryManager.App.Constants"
-    xmlns:stringResources="clr-namespace:ForeignWay.DeliveryManager.StringResources;assembly=ForeignWay.DeliveryManager.StringResources"
-    Title="Delivery Manager"
-    Width="1024"
-    Height="785"
-    d:DataContext="{d:DesignInstance app:ShellViewModel}"
-    prism:ViewModelLocator.AutoWireViewModel="True"
-    TitleCharacterCasing="Normal"
-    mc:Ignorable="d">
+﻿<controls:MetroWindow x:Class="ForeignWay.DeliveryManager.App.Shell"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:app="clr-namespace:ForeignWay.DeliveryManager.App"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:prism="http://prismlibrary.com/"
+                      xmlns:regionNames="clr-namespace:ForeignWay.DeliveryManager.App.Constants"
+                      xmlns:stringResources="clr-namespace:ForeignWay.DeliveryManager.StringResources;assembly=ForeignWay.DeliveryManager.StringResources"
+                      Title="Delivery Manager"
+                      Width="1024"
+                      Height="785"
+                      d:DataContext="{d:DesignInstance app:ShellViewModel}"
+                      prism:ViewModelLocator.AutoWireViewModel="True"
+                      TitleCharacterCasing="Normal"
+                      mc:Ignorable="d">
     <Grid>
-        <StackPanel Visibility="{Binding CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}" ZIndex="100">
+        <StackPanel Visibility="{Binding CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}"
+                    ZIndex="100">
             <ToolBarTray VerticalAlignment="Top">
                 <ToolBar>
+                    <Button Command="{Binding NavigateHomeCommand}">
+                        <materialDesign:PackIcon Kind="Home" />
+                    </Button>
                     <Button Command="{Binding BackCommand}">
-                        <Button.Content>
-                            <DockPanel>
-                                <materialDesign:PackIcon VerticalAlignment="Center" Kind="ArrowBack" />
-                                <TextBlock
-                                    Margin="5,0"
-                                    VerticalAlignment="Center"
-                                    Text="{x:Static stringResources:UIResources.Shell_NavigateBack}" />
-                            </DockPanel>
-                        </Button.Content>
+                        <DockPanel>
+                            <materialDesign:PackIcon VerticalAlignment="Center"
+                                                     Kind="ArrowBack" />
+                            <TextBlock Margin="5 0"
+                                       VerticalAlignment="Center"
+                                       Text="{x:Static stringResources:UIResources.Shell_NavigateBack}" />
+                        </DockPanel>
                     </Button>
                 </ToolBar>
             </ToolBarTray>
