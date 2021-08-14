@@ -123,6 +123,12 @@
   <data name="OrdersView_Title" xml:space="preserve">
     <value>Orders</value>
   </data>
+  <data name="SettingsView_User_Header" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="SettingsView_User_SearchTerm" xml:space="preserve">
+    <value>Search term:</value>
+  </data>
   <data name="Shell_NavigateBack" xml:space="preserve">
     <value>Back</value>
   </data>

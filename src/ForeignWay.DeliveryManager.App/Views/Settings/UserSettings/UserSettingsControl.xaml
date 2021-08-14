@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ForeignWay.DeliveryManager.App.Views.Settings.UserSettings.UserSettingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:userSettings="clr-namespace:ForeignWay.DeliveryManager.App.Views.Settings.UserSettings"
+             xmlns:stringResources="clr-namespace:ForeignWay.DeliveryManager.StringResources;assembly=ForeignWay.DeliveryManager.StringResources"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance userSettings:UserSettingsControlViewModel}"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Margin="20"
+                    Orientation="Horizontal">
+            <Label FontWeight="Bold"
+                   Content="{x:Static stringResources:UIResources.SettingsView_User_SearchTerm}" />
+            <TextBox Margin="5 0"
+                     MinWidth="100"
+                     Text="{Binding SearchTerm}" />
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" />
+    </Grid>
+</UserControl>

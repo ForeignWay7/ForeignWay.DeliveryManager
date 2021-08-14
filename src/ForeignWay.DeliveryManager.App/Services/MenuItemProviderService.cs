@@ -11,11 +11,21 @@ namespace ForeignWay.DeliveryManager.App.Services
     {
         public ObservableCollection<MenuItemViewModel> GetMenuItemsFor(UserType userType)
         {
-            return new ObservableCollection<MenuItemViewModel>
+            var menuItems = new ObservableCollection<MenuItemViewModel>
             {
                 new (PackIconKind.BorderColor, UIResources.NewOrderView_Title, ViewNames.NewOrderView),
                 new (PackIconKind.BorderColor, UIResources.OrdersView_Title, ViewNames.OrdersView),
             };
+
+            if (userType == UserType.Admin)
+            {
+                menuItems.AddRange(new ObservableCollection<MenuItemViewModel>
+                {
+                    new(PackIconKind.Settings, UIResources.SettingsView_User_Header, ViewNames.SettingsView)
+                });
+            }
+
+            return menuItems;
         }
     }
 }

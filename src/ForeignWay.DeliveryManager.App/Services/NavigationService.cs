@@ -35,6 +35,8 @@ namespace ForeignWay.DeliveryManager.App.Services
 
         public void NavigateHome(UserType userType)
         {
+            ClearJournalForRegion(RegionNames.MainRegion);
+
             var parameters = new NavigationParameters
             {
                 { NavigationParameterNames.UserType, userType }
@@ -51,6 +53,11 @@ namespace ForeignWay.DeliveryManager.App.Services
         public void NavigateTo(string viewName)
         {
             Application.Current.Dispatcher.Invoke(() => _regionManager.RequestNavigate(RegionNames.MainRegion, viewName));
+        }
+
+        private void ClearJournalForRegion(string regionName)
+        {
+            _regionManager.Regions[regionName].NavigationService.Journal.Clear();
         }
     }
 }

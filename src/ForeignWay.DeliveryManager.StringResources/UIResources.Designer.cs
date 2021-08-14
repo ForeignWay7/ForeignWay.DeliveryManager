@@ -79,6 +79,24 @@ namespace ForeignWay.DeliveryManager.StringResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Users.
+        /// </summary>
+        public static string SettingsView_User_Header {
+            get {
+                return ResourceManager.GetString("SettingsView_User_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search term:.
+        /// </summary>
+        public static string SettingsView_User_SearchTerm {
+            get {
+                return ResourceManager.GetString("SettingsView_User_SearchTerm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
         public static string Shell_NavigateBack {

@@ -6,5 +6,6 @@
         public static string HomeView = nameof(Views.Home.HomeView);
         public static string NewOrderView = nameof(Views.NewOrder.NewOrderView);
         public static string OrdersView = nameof(Views.Orders.OrdersView);
+        public static string SettingsView = nameof(Views.Settings.SettingsView);
     }
 }

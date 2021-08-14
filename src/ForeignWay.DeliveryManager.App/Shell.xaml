@@ -17,7 +17,13 @@
                       TitleCharacterCasing="Normal"
                       mc:Ignorable="d">
     <Grid>
-        <StackPanel Visibility="{Binding CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Visibility="{Binding CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}"
                     ZIndex="100">
             <ToolBarTray VerticalAlignment="Top">
                 <ToolBar>
@@ -37,7 +43,9 @@
             </ToolBarTray>
         </StackPanel>
 
-        <ContentControl prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.MainRegion}" />
-        <ContentControl prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.PopupRegion}" />
+        <ContentControl Grid.Row="1"
+                        prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.MainRegion}" />
+        <ContentControl Grid.Row="1"
+                        prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.PopupRegion}" />
     </Grid>
 </controls:MetroWindow>
