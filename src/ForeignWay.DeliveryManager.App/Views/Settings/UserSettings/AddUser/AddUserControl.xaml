@@ -69,6 +69,10 @@
                               SelectedIndex="0" />
                 </Grid>
 
+                <Label Foreground="Red"
+                       Visibility="{Binding ErrorOccurred, Converter={StaticResource BooleanToVisibilityConverter}}"
+                       Content="{Binding ErrorText}" />
+
                 <Grid Margin="20 70 20 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />

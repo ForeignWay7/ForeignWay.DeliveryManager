@@ -70,6 +70,24 @@ namespace ForeignWay.DeliveryManager.StringResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unknown error occurred!.
+        /// </summary>
+        public static string AddUserControl_AddError_UnknownError {
+            get {
+                return ResourceManager.GetString("AddUserControl_AddError_UnknownError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User name already exists!.
+        /// </summary>
+        public static string AddUserControl_AddError_UserExists {
+            get {
+                return ResourceManager.GetString("AddUserControl_AddError_UserExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string AddUserControl_Cancel {

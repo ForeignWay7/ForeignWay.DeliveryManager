@@ -11,18 +11,24 @@ namespace ForeignWay.DeliveryManager.BusinessLogic.Users
     {
         private readonly IUserRepository _userRepository;
         private readonly IAuthenticationService _authenticationService;
+        private readonly IPasswordService _passwordService;
 
 
-        public UsersService(IUserRepository userRepository, IAuthenticationService authenticationService)
+        public UsersService(IUserRepository userRepository, IAuthenticationService authenticationService, IPasswordService passwordService)
         {
             _userRepository = userRepository;
             _authenticationService = authenticationService;
+            _passwordService = passwordService;
         }
 
 
-        public Task<IUsersService.ErrorType> AddAsync(User user)
+        public async Task<IUsersService.ErrorType> AddAsync(User user)
         {
-            return _userRepository.AddAsync(user);
+            var hashedPassword = await _passwordService.CreateHashAsync(user.Password);
+
+            var newUser = new User(user.Id, user.UserName, hashedPassword, user.UserType);
+
+            return await _userRepository.AddAsync(newUser);
         }
 
         public Task<IEnumerable<User>> GetAllAsync()

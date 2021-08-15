@@ -120,6 +120,12 @@
   <data name="AddUserControl_Add" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="AddUserControl_AddError_UnknownError" xml:space="preserve">
+    <value>Unknown error occurred!</value>
+  </data>
+  <data name="AddUserControl_AddError_UserExists" xml:space="preserve">
+    <value>User name already exists!</value>
+  </data>
   <data name="AddUserControl_Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>

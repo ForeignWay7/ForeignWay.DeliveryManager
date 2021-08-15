@@ -1,6 +1,7 @@
 ﻿using ForeignWay.DeliveryManager.App.Constants;
 using ForeignWay.DeliveryManager.App.Helpers;
 using ForeignWay.DeliveryManager.BusinessLogic.Contracts.Users;
+using ForeignWay.DeliveryManager.StringResources;
 using ForeignWay.DeliveryManager.Types.Users;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -20,6 +21,8 @@ namespace ForeignWay.DeliveryManager.App.Views.Settings.UserSettings.AddUser
         private bool _isDialogOpen;
         private string _userName;
         private UserType _selectedUserType;
+        private bool _errorOccurred;
+        private string _errorText;
 
 
         public bool IsDialogOpen
@@ -46,6 +49,20 @@ namespace ForeignWay.DeliveryManager.App.Views.Settings.UserSettings.AddUser
             UserType.Employee
         };
 
+
+        public bool ErrorOccurred
+        {
+            get => _errorOccurred;
+            set => SetProperty(ref _errorOccurred, value);
+        }
+
+        public string ErrorText
+        {
+            get => _errorText;
+            set => SetProperty(ref _errorText, value);
+        }
+
+
         public DelegateCommand<object> AddUserCommand { get; set; }
 
         public DelegateCommand CancelCommand { get; set; }
@@ -68,6 +85,20 @@ namespace ForeignWay.DeliveryManager.App.Views.Settings.UserSettings.AddUser
             var user = new User(Guid.NewGuid(), userName, password, userType);
             var errorType = await _usersService.AddAsync(user);
             var isUserAdded = errorType == IUsersService.ErrorType.None;
+
+            if (isUserAdded == false)
+            {
+                ErrorOccurred = true;
+
+                ErrorText = errorType switch
+                {
+                    IUsersService.ErrorType.UserExists => UIResources.AddUserControl_AddError_UserExists,
+                    IUsersService.ErrorType.Unknown => UIResources.AddUserControl_AddError_UnknownError,
+                    _ => ErrorText
+                };
+
+                return;
+            }
 
             _callback(isUserAdded);
             IsDialogOpen = false;
