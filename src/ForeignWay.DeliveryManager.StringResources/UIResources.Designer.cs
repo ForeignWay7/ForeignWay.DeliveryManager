@@ -61,6 +61,60 @@ namespace ForeignWay.DeliveryManager.StringResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string AddUserControl_Add {
+            get {
+                return ResourceManager.GetString("AddUserControl_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string AddUserControl_Cancel {
+            get {
+                return ResourceManager.GetString("AddUserControl_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string AddUserControl_Password {
+            get {
+                return ResourceManager.GetString("AddUserControl_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add User.
+        /// </summary>
+        public static string AddUserControl_Title {
+            get {
+                return ResourceManager.GetString("AddUserControl_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User name.
+        /// </summary>
+        public static string AddUserControl_UserName {
+            get {
+                return ResourceManager.GetString("AddUserControl_UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User type.
+        /// </summary>
+        public static string AddUserControl_UserType {
+            get {
+                return ResourceManager.GetString("AddUserControl_UserType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New Order.
         /// </summary>
         public static string NewOrderView_Title {
@@ -138,6 +192,60 @@ namespace ForeignWay.DeliveryManager.StringResources {
         public static string SingInView_WrongCredentials {
             get {
                 return ResourceManager.GetString("SingInView_WrongCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add User.
+        /// </summary>
+        public static string UserSettingsControl_AddUser {
+            get {
+                return ResourceManager.GetString("UserSettingsControl_AddUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string UserSettingsControl_Remove {
+            get {
+                return ResourceManager.GetString("UserSettingsControl_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You cannot remove the current user!.
+        /// </summary>
+        public static string UserSettingsControl_RemoveCurrentUser_ErrorMessage {
+            get {
+                return ResourceManager.GetString("UserSettingsControl_RemoveCurrentUser_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string UserSettingsControl_RemoveCurrentUser_ErrorTitle {
+            get {
+                return ResourceManager.GetString("UserSettingsControl_RemoveCurrentUser_ErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Name.
+        /// </summary>
+        public static string UserSettingsControl_UserName {
+            get {
+                return ResourceManager.GetString("UserSettingsControl_UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Type.
+        /// </summary>
+        public static string UserSettingsControl_UserType {
+            get {
+                return ResourceManager.GetString("UserSettingsControl_UserType", resourceCulture);
             }
         }
     }

@@ -17,35 +17,38 @@
                       TitleCharacterCasing="Normal"
                       mc:Ignorable="d">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0"
-                    Visibility="{Binding CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}"
-                    ZIndex="100">
-            <ToolBarTray VerticalAlignment="Top">
-                <ToolBar>
-                    <Button Command="{Binding NavigateHomeCommand}">
-                        <materialDesign:PackIcon Kind="Home" />
-                    </Button>
-                    <Button Command="{Binding BackCommand}">
-                        <DockPanel>
-                            <materialDesign:PackIcon VerticalAlignment="Center"
-                                                     Kind="ArrowBack" />
-                            <TextBlock Margin="5 0"
-                                       VerticalAlignment="Center"
-                                       Text="{x:Static stringResources:UIResources.Shell_NavigateBack}" />
-                        </DockPanel>
-                    </Button>
-                </ToolBar>
-            </ToolBarTray>
-        </StackPanel>
+            <StackPanel Grid.Row="0"
+                        Visibility="{Binding CanGoBack, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        ZIndex="100">
+                <ToolBarTray VerticalAlignment="Top">
+                    <ToolBar>
+                        <Button Foreground="Teal"
+                                Command="{Binding NavigateHomeCommand}">
+                            <materialDesign:PackIcon Kind="Home" />
+                        </Button>
+                        <Button Foreground="Teal"
+                                Command="{Binding BackCommand}">
+                            <DockPanel>
+                                <materialDesign:PackIcon VerticalAlignment="Center"
+                                                         Kind="ArrowBack" />
+                                <TextBlock Margin="5 0"
+                                           VerticalAlignment="Center"
+                                           Text="{x:Static stringResources:UIResources.Shell_NavigateBack}" />
+                            </DockPanel>
+                        </Button>
+                    </ToolBar>
+                </ToolBarTray>
+            </StackPanel>
 
-        <ContentControl Grid.Row="1"
-                        prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.MainRegion}" />
-        <ContentControl Grid.Row="1"
-                        prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.PopupRegion}" />
+            <ContentControl Grid.Row="1"
+                            prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.MainRegion}" />
+        </Grid>
+        <ContentControl prism:RegionManager.RegionName="{x:Static regionNames:RegionNames.PopupRegion}" />
     </Grid>
 </controls:MetroWindow>

@@ -7,6 +7,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:userSettings="clr-namespace:ForeignWay.DeliveryManager.App.Views.Settings.UserSettings"
              xmlns:stringResources="clr-namespace:ForeignWay.DeliveryManager.StringResources;assembly=ForeignWay.DeliveryManager.StringResources"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance userSettings:UserSettingsControlViewModel}"
              d:DesignHeight="450"
@@ -18,16 +19,85 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0"
-                    Margin="20"
-                    Orientation="Horizontal">
-            <Label FontWeight="Bold"
-                   Content="{x:Static stringResources:UIResources.SettingsView_User_SearchTerm}" />
-            <TextBox Margin="5 0"
-                     MinWidth="100"
-                     Text="{Binding SearchTerm}" />
-        </StackPanel>
+        <Border Grid.Row="0"
+                Margin="5"
+                BorderThickness="1"
+                BorderBrush="Teal">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-        <DataGrid Grid.Row="1" />
+                <TextBlock Grid.Column="0"
+                           Margin="20"
+                           FontSize="15"
+                           Text="{x:Static stringResources:UIResources.UserSettingsControl_AddUser}" />
+                <Button Grid.Column="1"
+                        Margin="10 0"
+                        Command="{Binding AddUserCommand}">
+                    <materialDesign:PackIcon Width="42"
+                                             Height="42"
+                                             VerticalAlignment="Center"
+                                             Kind="Plus" />
+                </Button>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1"
+                Margin="5 20"
+                BorderThickness="1"
+                BorderBrush="Teal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0"
+                            Margin="20"
+                            Orientation="Horizontal">
+                    <Label FontWeight="Bold"
+                           Content="{x:Static stringResources:UIResources.SettingsView_User_SearchTerm}" />
+                    <TextBox Margin="5 0"
+                             MinWidth="100"
+                             Text="{Binding SearchTerm}" />
+                </StackPanel>
+
+                <DataGrid Grid.Row="1"
+                          Margin="15"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          SelectionMode="Single"
+                          SelectionUnit="FullRow"
+                          ItemsSource="{Binding Users}"
+                          SelectedItem="{Binding SelectedUser}"
+                          SelectedIndex="0">
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell"
+                               BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </DataGrid.CellStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{x:Static stringResources:UIResources.UserSettingsControl_UserName}"
+                                            Binding="{Binding UserName}" />
+                        <DataGridTextColumn Header="{x:Static stringResources:UIResources.UserSettingsControl_UserType}"
+                                            Binding="{Binding UserType}" />
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Margin="3"
+                                            Content="{x:Static stringResources:UIResources.UserSettingsControl_Remove}"
+                                            Command="{Binding DataContext.RemoveUserCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}}"
+                                            CommandParameter="{Binding DataContext.SelectedUser, RelativeSource={RelativeSource FindAncestor, AncestorType=DataGrid}}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>

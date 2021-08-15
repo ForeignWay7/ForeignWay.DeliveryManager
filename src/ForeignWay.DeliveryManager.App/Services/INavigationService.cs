@@ -1,4 +1,5 @@
 ﻿using ForeignWay.DeliveryManager.Types.Users;
+using System;
 
 namespace ForeignWay.DeliveryManager.App.Services
 {
@@ -13,5 +14,7 @@ namespace ForeignWay.DeliveryManager.App.Services
         void NavigateToSignInView();
 
         void NavigateTo(string viewName);
+
+        void ShowAddUserOverlay(Action<bool> callback);
     }
 }

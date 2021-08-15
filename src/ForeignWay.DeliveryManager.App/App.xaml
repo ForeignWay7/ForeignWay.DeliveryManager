@@ -4,6 +4,8 @@
                         xmlns:prism="http://prismlibrary.com/">
     <Application.Resources>
         <ResourceDictionary>
+        <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush"
+                         Color="Teal" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />

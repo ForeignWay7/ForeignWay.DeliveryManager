@@ -34,7 +34,7 @@
                 <DataTemplate>
                     <Button Width="250"
                             Height="100"
-                            Background="DarkGray"
+                            Background="Teal"
                             Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=ListView}}"
                             CommandParameter="{Binding ViewName}">
                         <Button.Content>

@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddUserControl_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddUserControl_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AddUserControl_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="AddUserControl_Title" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="AddUserControl_UserName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="AddUserControl_UserType" xml:space="preserve">
+    <value>User type</value>
+  </data>
   <data name="NewOrderView_Title" xml:space="preserve">
     <value>New Order</value>
   </data>
@@ -143,5 +161,23 @@
   </data>
   <data name="SingInView_WrongCredentials" xml:space="preserve">
     <value>Wrong Credentials!</value>
+  </data>
+  <data name="UserSettingsControl_AddUser" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="UserSettingsControl_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="UserSettingsControl_RemoveCurrentUser_ErrorMessage" xml:space="preserve">
+    <value>You cannot remove the current user!</value>
+  </data>
+  <data name="UserSettingsControl_RemoveCurrentUser_ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="UserSettingsControl_UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="UserSettingsControl_UserType" xml:space="preserve">
+    <value>User Type</value>
   </data>
 </root>

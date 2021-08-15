@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace ForeignWay.DeliveryManager.App.Services
 {
-    public class NavigationService : INavigationService
+    internal partial class NavigationService : INavigationService
     {
         private readonly IRegionManager _regionManager;
 

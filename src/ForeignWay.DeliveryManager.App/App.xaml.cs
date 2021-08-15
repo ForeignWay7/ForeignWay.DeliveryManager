@@ -4,6 +4,7 @@ using ForeignWay.DeliveryManager.App.Views.Home;
 using ForeignWay.DeliveryManager.App.Views.NewOrder;
 using ForeignWay.DeliveryManager.App.Views.Orders;
 using ForeignWay.DeliveryManager.App.Views.Settings;
+using ForeignWay.DeliveryManager.App.Views.Settings.UserSettings.AddUser;
 using ForeignWay.DeliveryManager.App.Views.SignIn;
 using Prism.Ioc;
 using Prism.Mvvm;
@@ -29,6 +30,7 @@ namespace ForeignWay.DeliveryManager.App
             containerRegistry.Register<IMenuItemsProviderService, MenuItemProviderService>();
 
             containerRegistry.Register<INavigationService, NavigationService>();
+            containerRegistry.Register<IConfirmationOverlay, ConfirmationOverlay>();
 
             RegisterViewsForNavigation(containerRegistry);
         }
@@ -47,6 +49,7 @@ namespace ForeignWay.DeliveryManager.App
             containerRegistry.RegisterForNavigation<NewOrderView, NewOrderViewModel>();
             containerRegistry.RegisterForNavigation<OrdersView, OrdersViewModel>();
             containerRegistry.RegisterForNavigation<SettingsView, SettingsViewModel>();
+            containerRegistry.RegisterForNavigation<AddUserControl, AddUserControlViewModel>();
         }
 
         private void RegisterViewsWithViewModels()
